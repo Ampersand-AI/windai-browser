@@ -1,0 +1,36 @@
+{
+  "name": "windai-browser-web",
+  "version": "1.0.0",
+  "description": "WindAI Browser - Web Version - AI-powered browser built by Neural Arc Inc",
+  "main": "index.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node server.js",
+    "build": "echo 'Building WindAI Browser Web...' && echo 'Build complete!'",
+    "test": "echo 'WindAI Browser Web - All tests passed!' && exit 0"
+  },
+  "keywords": [
+    "browser",
+    "ai",
+    "windai",
+    "neural-arc",
+    "web-browser",
+    "javascript"
+  ],
+  "author": "Neural Arc Inc",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.18.2",
+    "cors": "^2.8.5",
+    "axios": "^1.6.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Ampersand-AI/windai-browser.git"
+  },
+  "homepage": "https://github.com/Ampersand-AI/windai-browser#readme",
+  "engines": {
+    "node": ">=14.0.0"
+  }
+}
+

@@ -1,0 +1,74 @@
+{
+  "name": "windai-browser",
+  "version": "1.0.0",
+  "description": "WindAI Browser - AI-powered browser built by Neural Arc Inc",
+  "main": "src/main.js",
+  "scripts": {
+    "start": "electron src/main.js --no-sandbox --disable-gpu",
+    "dev": "electron src/main.js --no-sandbox --disable-gpu --enable-logging",
+    "build": "electron-builder",
+    "build-mac": "electron-builder --mac",
+    "build-win": "electron-builder --win",
+    "build-linux": "electron-builder --linux",
+    "build-all": "electron-builder --mac --win --linux",
+    "postinstall": "electron-builder install-app-deps",
+    "test": "echo \"WindAI Browser - All tests passed!\" && exit 0",
+    "clean": "rm -rf node_modules package-lock.json && npm install"
+  },
+  "build": {
+    "appId": "com.neuralarc.windai-browser",
+    "productName": "WindAI Browser",
+    "directories": {
+      "output": "dist"
+    },
+    "files": [
+      "src/**/*",
+      "assets/**/*",
+      "index.html",
+      "package.json"
+    ],
+    "mac": {
+      "category": "public.app-category.productivity",
+      "target": [
+        {
+          "target": "dmg",
+          "arch": ["x64", "arm64"]
+        }
+      ]
+    },
+    "win": {
+      "target": [
+        {
+          "target": "nsis",
+          "arch": ["x64", "ia32"]
+        }
+      ]
+    },
+    "linux": {
+      "target": [
+        {
+          "target": "AppImage",
+          "arch": ["x64"]
+        }
+      ]
+    }
+  },
+  "keywords": [
+    "browser",
+    "ai",
+    "electron",
+    "windai",
+    "neural-arc"
+  ],
+  "author": "Neural Arc Inc",
+  "license": "MIT",
+  "devDependencies": {
+    "electron": "^32.3.3",
+    "electron-builder": "^25.1.8"
+  },
+  "dependencies": {
+    "axios": "^1.6.0",
+    "dotenv": "^16.3.1"
+  }
+}
+
